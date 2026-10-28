@@ -59,6 +59,11 @@ limitations under the License.
             <height>${height}</height>
             <format>R_FLOAT32</format>
           </image>
+
+          <clip>
+            <near>${min_dist}</near>
+            <far>${max_dist}</far>
+          </clip>
         </camera>
 
         <depth_camera>

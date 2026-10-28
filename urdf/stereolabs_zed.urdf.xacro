@@ -53,7 +53,7 @@ limitations under the License.
     <xacro:include filename="$(find husarion_components_description)/urdf/gz_sensor.urdf.xacro" ns="gz_sensor" />
 
     <xacro:gz_sensor.camera
-      reference="${component_name}_camera_center"
+      reference="${component_name}_left_camera_frame"
       name="${robot_namespace_slash}${component_name}_camera_color"
       topic="${robot_namespace_slash}${component_name}/zed_node/rgb/image_rect_color"
       frame_id="zed_left_camera_frame_optical"
@@ -63,7 +63,7 @@ limitations under the License.
       fov="${110.0/180.0*pi}" />
 
     <xacro:gz_sensor.depth_camera
-      reference="${component_name}_camera_center"
+      reference="${component_name}_left_camera_frame"
       name="${robot_namespace_slash}${component_name}_camera_depth"
       topic="${robot_namespace_slash}${component_name}/zed_node/depth"
       frame_id="zed_left_camera_frame_optical"

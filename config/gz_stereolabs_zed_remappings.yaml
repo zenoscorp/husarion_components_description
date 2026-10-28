@@ -21,5 +21,6 @@
   - topic_name: <robot_namespace><component_name>/zed_node/depth/points
     ros_type_name: sensor_msgs/msg/PointCloud2
     gz_type_name: gz.msgs.PointCloudPacked
+    frame_id: <cloud_frame>
     lazy: true
     direction: GZ_TO_ROS

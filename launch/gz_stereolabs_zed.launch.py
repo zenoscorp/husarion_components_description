@@ -43,6 +43,8 @@ def generate_launch_description():
         replacements={
             "<robot_namespace>": robot_namespace,
             "<component_name>": component_name,
+            # Gazebo depth clouds carry x-forward coordinates, unlike images.
+            "<cloud_frame>": "zed_left_camera_frame",
         },
     )
 

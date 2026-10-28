@@ -12,12 +12,6 @@
     lazy: true
     direction: GZ_TO_ROS
 
-  - topic_name: <robot_namespace><component_name>/zed_node/camera_info
-    ros_type_name: sensor_msgs/msg/CameraInfo
-    gz_type_name: gz.msgs.CameraInfo
-    lazy: true
-    direction: GZ_TO_ROS
-
   - topic_name: <robot_namespace><component_name>/zed_node/depth
     ros_type_name: sensor_msgs/msg/Image
     gz_type_name: gz.msgs.Image

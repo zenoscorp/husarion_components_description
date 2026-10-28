@@ -40,7 +40,7 @@ limitations under the License.
     </gazebo>
   </xacro:macro>
 
-  <xacro:macro name="depth_camera" params="reference name topic frame_id frequency width height fov min_dist max_dist stddev_error">
+  <xacro:macro name="depth_camera" params="reference name topic frame_id optical_frame_id:='${frame_id}' frequency width height fov min_dist max_dist stddev_error">
     <gazebo reference="${reference}">
       <sensor type="depth_camera" name="${name}">
         <always_on>true</always_on>
@@ -51,7 +51,7 @@ limitations under the License.
         <update_rate>${frequency}</update_rate>
 
         <camera>
-          <optical_frame_id>${frame_id}</optical_frame_id>
+          <optical_frame_id>${optical_frame_id}</optical_frame_id>
           <horizontal_fov>${fov}</horizontal_fov>
 
           <image>
